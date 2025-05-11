@@ -68,3 +68,146 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+Loan Manager (Community) - README
+Overview
+The Loan Manager (Community) is a web application designed to manage loan applications, approval, and rejection processes. It provides role-based access for users, verifiers, and admins. Users can apply for loans, verifiers can view and approve/reject loan applications, and admins have control over all loan data.
+
+Technologies Used:
+.Frontend: React.js
+.Backend: Node.js, Express.js
+.Database: PostgreSQL
+.Authentication: JWT (JSON Web Tokens)
+
+Features:
+.User:
+..Register and login.
+..Apply for loans.
+..View their loan status.
+
+.Verifier:
+..View loan applications.
+..Approve or reject loans.
+
+.Admin:
+..View all loan applications.
+..Approve or reject loans.
+..Full control over the loan status.
+
+Project Setup
+Prerequisites
+.Node.js (v14 or later)
+.PostgreSQL (for database setup)
+.npm (Node Package Manager)
+
+Backend Setup
+Clone the repository:
+git clone <repository-url>
+cd loan-manager-community
+Install dependencies:
+
+bash
+Copy
+Edit
+cd backend
+npm install
+Configure PostgreSQL:
+
+Create a PostgreSQL database for the application.
+
+Update the database connection details in backend/config/db.js to match your local PostgreSQL setup.
+
+Run database migrations (if any):
+
+bash
+Copy
+Edit
+npm run migrate
+Start the backend server:
+
+bash
+Copy
+Edit
+npm start
+The backend server will be running on http://localhost:5000.
+
+Frontend Setup
+Install frontend dependencies:
+
+bash
+Copy
+Edit
+cd frontend
+npm install
+Configure the frontend to connect with your backend:
+
+Update API base URLs in frontend/src/utils/api.js to match your backend server.
+
+Start the frontend development server:
+
+bash
+Copy
+Edit
+npm start
+The frontend will be available at http://localhost:3000.
+
+API Endpoints
+User Endpoints
+POST /api/register/user: Register a new user.
+
+POST /api/login/user: Login as a user (returns JWT token).
+
+GET /api/loans: View all loans for a user.
+
+POST /api/loans: Apply for a new loan.
+
+Verifier Endpoints
+GET /api/loans: View all loan applications.
+
+PUT /api/loans/:id/status: Approve or reject a loan application.
+
+Admin Endpoints
+GET /api/loans: View all loan applications.
+
+PUT /api/loans/:id/status: Approve or reject a loan application.
+
+Running in Development
+The backend server runs on port 5000 by default.
+
+The frontend runs on port 3000 by default.
+
+In development, both servers need to be running concurrently. You can use concurrently to run both frontend and backend from one terminal:
+
+bash
+Copy
+Edit
+npm install -g concurrently
+Then, run:
+
+bash
+Copy
+Edit
+concurrently "npm run start:frontend" "npm run start:backend"
+
+Folder Structure
+
+/loanmanager
+  /frontend              # React.js frontend
+    /src
+      /components        # React components
+      /pages             # Page components (e.g. LoanList, Dashboard)
+  /backend               # Node.js backend
+    /controllers         # Business logic for loan operations
+    /models              # Database models and queries
+    /routes              # Express routes
+    /config              # Configuration (DB connection, etc.)
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Author
+Developed by CH Harshavardhan Reddy
+
+
