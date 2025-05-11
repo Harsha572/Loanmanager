@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -211,3 +212,6 @@ Author
 Developed by CH Harshavardhan Reddy
 
 
+=======
+# Loanmanager
+>>>>>>> 51ea211325d48dda63ae716bec91ca6c00f7a86a
