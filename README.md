@@ -75,6 +75,13 @@ Loan Manager (Community) - README
 Overview
 The Loan Manager (Community) is a web application designed to manage loan applications, approval, and rejection processes. It provides role-based access for users, verifiers, and admins. Users can apply for loans, verifiers can view and approve/reject loan applications, and admins have control over all loan data.
 
+Repository Structure:
+This project is organized with two separate branches:
+.main branch – Contains the backend (Node.js + PostgreSQL)
+.master branch – Contains the frontend (React.js)
+Switch between branches to access the respective codebases.
+
+
 Technologies Used:
 .Frontend: React.js
 .Backend: Node.js, Express.js
@@ -108,9 +115,6 @@ git clone <repository-url>
 cd loan-manager-community
 Install dependencies:
 
-bash
-Copy
-Edit
 cd backend
 npm install
 Configure PostgreSQL:
@@ -121,24 +125,15 @@ Update the database connection details in backend/config/db.js to match your loc
 
 Run database migrations (if any):
 
-bash
-Copy
-Edit
 npm run migrate
 Start the backend server:
 
-bash
-Copy
-Edit
 npm start
 The backend server will be running on http://localhost:5000.
 
 Frontend Setup
 Install frontend dependencies:
 
-bash
-Copy
-Edit
 cd frontend
 npm install
 Configure the frontend to connect with your backend:
@@ -146,10 +141,6 @@ Configure the frontend to connect with your backend:
 Update API base URLs in frontend/src/utils/api.js to match your backend server.
 
 Start the frontend development server:
-
-bash
-Copy
-Edit
 npm start
 The frontend will be available at http://localhost:3000.
 
@@ -179,16 +170,9 @@ The backend server runs on port 5000 by default.
 The frontend runs on port 3000 by default.
 
 In development, both servers need to be running concurrently. You can use concurrently to run both frontend and backend from one terminal:
-
-bash
-Copy
-Edit
 npm install -g concurrently
 Then, run:
 
-bash
-Copy
-Edit
 concurrently "npm run start:frontend" "npm run start:backend"
 
 Folder Structure
