@@ -1,5 +1,5 @@
 const pool = require('../config/db'); // Your database connection pool
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const { findUserByUsername } = require('../models/userModel'); // Assuming this is already in place
 
 exports.loginUser = async (req, res) => {
